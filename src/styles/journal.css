@@ -1,0 +1,28 @@
+body {
+  background-color: #f5e942;
+  background-image: url(/img/notepad.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* styles */
+p {
+  color: #ad0704;
+  font-weight: bolder;
+  text-shadow: rgb(128, 0, 0);
+}
+.journal_header {
+  text-align: center;
+  padding-top: 90px;
+}
+.journal_fields {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.journal_form {
+  display: flex;
+  justify-content: center;
+}
+/* end of styles */
