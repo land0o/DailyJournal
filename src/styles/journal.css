@@ -12,9 +12,12 @@ p {
   font-weight: bolder;
   text-shadow: rgb(128, 0, 0);
 }
+h1 {
+  color: blueviolet;
+}
 .journal_header {
   text-align: center;
-  padding-top: 90px;
+  padding-top: 100px;
 }
 .journal_fields {
   display: flex;
