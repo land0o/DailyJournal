@@ -33,7 +33,8 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   flex-basis: auto;
-  flex: 0 1 calc(25% - 1em);
+  /* align-items: center; */
+  /* flex: 0 1 calc(25% - 1em); */
   flex-wrap: wrap;
 }
 .journal-card {
