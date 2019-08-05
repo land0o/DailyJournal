@@ -14,3 +14,4 @@ const renderJournalEntries = (
             </div>
         `;
 };
+export default renderJournalEntries;

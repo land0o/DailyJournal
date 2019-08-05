@@ -1,6 +1,19 @@
+// import the other js files into main
+import ApiData from "./data.js";
+import renderJournalEntries from "./factory.js";
 // invoke the journal submisons to the page
 
-ApiData.getJournalEntries();
+ApiData().then(entriesArray => {
+  for (const entry of entriesArray) {
+    let journalDom = document.querySelector(".entryLog");
+    journalDom.innerHTML += renderJournalEntries(
+      entry.JournalDate,
+      entry.ConceptsCovered,
+      entry.JournalEntry,
+      entry.Mood
+    );
+  }
+});
 
 // // submit button
 

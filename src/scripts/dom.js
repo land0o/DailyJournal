@@ -4,3 +4,4 @@ let journalDom = document.querySelector(".entryLog");
 const journalDomRender = HtmlInsert => {
   journalDom.innerHTML += HtmlInsert;
 };
+export default journalDomRender;
