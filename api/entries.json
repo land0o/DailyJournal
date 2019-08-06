@@ -1,36 +1,41 @@
 {
-  "journalEntries": [
-    {
+  "journalEntries": [{
+      "id": 1,
       "JournalDate": "07/12/2019",
       "ConceptsCovered": "JavaScript Objects",
       "JournalEntry": "Today we went over Book 2 Chapter 2 JavaScript Objects. We practiced objects doing the lighting exercise in the chapter. I understand the difference between objects{} and arrays[]. Also learned about Dot and Bracket notation",
       "Mood": "Meh"
     },
     {
+      "id": 2,
       "JournalDate": "07/12/2019",
       "ConceptsCovered": "Querying the Dom",
       "JournalEntry": "Went over the queryselector and how it can be used to change items in the html without writing additional html code. Set up a class in CSS and you are able to manipulate the HTML with Javascript",
       "Mood": "Sappy"
     },
     {
+      "id": 3,
       "JournalDate": "07/11/2019",
       "ConceptsCovered": "Daily Journal",
       "JournalEntry": "Built and styled the 1st part of the daily journal",
       "Mood": "Glorious"
     },
     {
+      "id": 4,
       "JournalDate": "07/11/2019",
       "ConceptsCovered": "Flexbox",
       "JournalEntry": "Went over the Flexbox, and how it can be used to style pages, was able to complete the coffehouse practice!",
       "Mood": "Glorious"
     },
     {
+      "id": 5,
       "JournalDate": "07/19/2019",
       "ConceptsCovered": "API's",
       "JournalEntry": "Learned about API's(application program interface). Really cool but a little confusing.",
       "Mood": "Meh"
     },
     {
+      "id": 6,
       "JournalDate": "07/21/2019",
       "ConceptsCovered": "Daily Journal Part 3",
       "JournalEntry": "Completed the 3rd step of the daily journal fairly easy, wrote a function that inserts my html info into the DOM!",

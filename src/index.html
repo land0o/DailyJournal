@@ -10,7 +10,7 @@
   <body>
     <h1 class="journal_header">Daily Journal🖍📓✏</h1>
     <div class="journal_form">
-      <form action="" class="journalSubmissions">
+      <div class="journalSubmissions">
         <fieldset class="journal_fields">
           <label for="JournalDate">Date of entry:</label>
           <input type="date" name="journalDate" id="journalDate" />
@@ -38,7 +38,7 @@
         <!-- end of journal entry -->
         <fieldset class="journal_fields">
           <label for="Mood">Mood for the day:</label>
-          <select name="Moods">
+          <select name="Moods" id="mood">
             <option value="glorious">Glorious</option>
             <option value="sappy">Sappy</option>
             <option value="defeated">Defeated</option>
@@ -46,11 +46,11 @@
           </select>
         </fieldset>
         <!-- end of moods -->
-        <button type="submit" class="journal_button">
+        <button class="journal_button">
           Record Journal Entry
         </button>
         <!-- end of button -->
-      </form>
+      </div>
       <!-- end of form -->
     </div>
     <!-- end of div journal form -->
