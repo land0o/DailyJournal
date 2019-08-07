@@ -21,7 +21,7 @@ getAndRenderEntries();
 
 // submit button
 
-document.querySelector(".journal_button").addEventListener("click", event => {
+document.querySelector(".journal_button").addEventListener("click", () => {
   // stops the form from refreshing
   // event.preventDefault();
   // collect values from form
@@ -38,5 +38,11 @@ document.querySelector(".journal_button").addEventListener("click", event => {
   };
   console.log(journalObj);
   // invoke post function
-  ApiData.postJournalEntry(journalObj).then(getAndRenderEntries);
+  ApiData.postJournalEntry(journalObj)
+    .then(getAndRenderEntries)
+    .then(erase => {
+      //clears the input fields
+      document.getElementById("conceptsCovered").value = "";
+      document.getElementById("journalEntry").value = "";
+    });
 });

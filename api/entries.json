@@ -1,5 +1,6 @@
 {
-  "journalEntries": [{
+  "journalEntries": [
+    {
       "id": 1,
       "JournalDate": "07/12/2019",
       "ConceptsCovered": "JavaScript Objects",
@@ -40,6 +41,27 @@
       "ConceptsCovered": "Daily Journal Part 3",
       "JournalEntry": "Completed the 3rd step of the daily journal fairly easy, wrote a function that inserts my html info into the DOM!",
       "Mood": "Glorious"
+    },
+    {
+      "JournalDate": "2019-08-06",
+      "ConceptsCovered": "Daily Journal part 7",
+      "JournalEntry": "Had to create a new fetch call that post journal info on click of the \"journal entry button\". It works see!!!",
+      "Mood": "glorious",
+      "id": 7
+    },
+    {
+      "JournalDate": "2019-08-06",
+      "ConceptsCovered": "Olivia's 1st day of 1st grade!",
+      "JournalEntry": "Today was my daughters 1st day of  class! She didnt have to work and she just got to play and her best friend was there and they are in the same class. She is now wondering how Thursday will be \"Will it be more work than play time!?\" she ask. She does not want me to post this but I love her so much!!!!! She said I shouldn't be on the internet telling her business. lol",
+      "Mood": "glorious",
+      "id": 8
+    },
+    {
+      "JournalDate": "2019-08-06",
+      "ConceptsCovered": "Clear field",
+      "JournalEntry": "Finally got my input fields to clear by adding a .then(function) to return the text fields to an empty string on submission.",
+      "Mood": "glorious",
+      "id": 9
     }
   ]
 }
