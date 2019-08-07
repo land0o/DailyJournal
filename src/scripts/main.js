@@ -2,11 +2,12 @@
 import ApiData from "./data.js";
 import renderJournalEntries from "./factory.js";
 import journalDomRender from "./dom.js";
+const journalDom = document.querySelector(".entryLog");
+
 // invoke the journal submisons to the page
 const getAndRenderEntries = () => {
   ApiData.getJournalEntries().then(entriesArray => {
     for (const entry of entriesArray) {
-      let journalDom = document.querySelector(".entryLog");
       const html = renderJournalEntries(
         entry.JournalDate,
         entry.ConceptsCovered,
@@ -49,4 +50,32 @@ document.querySelector(".journal_button").addEventListener("click", () => {
         document.getElementById("journalEntry").value = "";
       });
   }
+});
+
+// radio buttons
+
+const radioButton = document.getElementsByName("filterMood");
+radioButton.forEach(btn => {
+  btn.addEventListener("click", event => {
+    const mood = event.target.value;
+    let filteredMood = "";
+
+    ApiData.filterJournalEntries(mood).then(filteredData => {
+      filteredData.forEach(moodObj => {
+        filteredMood += renderJournalEntries(
+          moodObj.JournalDate,
+          moodObj.ConceptsCovered,
+          moodObj.JournalEntry,
+          moodObj.Mood
+        );
+      });
+      console.log(filteredData);
+      journalDom.innerHTML = filteredMood;
+    });
+
+    console.log(mood);
+    // ApiData.getJournalEntries()
+    //   .then(allEntries => allEntries.filter(entry => entry.Mood === mood))
+    //   .then(filteredArray => console.log("filterMethod", filteredArray));
+  });
 });
