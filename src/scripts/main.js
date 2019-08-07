@@ -37,12 +37,16 @@ document.querySelector(".journal_button").addEventListener("click", () => {
     Mood: moodOfTheDay
   };
   console.log(journalObj);
-  // invoke post function
-  ApiData.postJournalEntry(journalObj)
-    .then(getAndRenderEntries)
-    .then(erase => {
-      //clears the input fields
-      document.getElementById("conceptsCovered").value = "";
-      document.getElementById("journalEntry").value = "";
-    });
+  if (date === "" || subject === "" || entry === "" || moodOfTheDay === "") {
+    alert("Please fill out all sections!");
+  } else {
+    // invoke post function
+    ApiData.postJournalEntry(journalObj)
+      .then(getAndRenderEntries)
+      .then(erase => {
+        //clears the input fields
+        document.getElementById("conceptsCovered").value = "";
+        document.getElementById("journalEntry").value = "";
+      });
+  }
 });

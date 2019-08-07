@@ -39,10 +39,12 @@ h1 {
 }
 .journal-card {
   border: 4px solid #a38250;
-  width: 35%;
+  width: 28%;
   margin: 10px 10px;
   background-color: #dadada;
-  opacity: -10%;
+  opacity: 0.9;
+  padding-left: 25px;
+  padding-right: 25px;
   text-align: center;
 }
 
