@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles/journal.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Questrial|Roboto+Mono|Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/7b42dc2270.js"></script>
+
     <title>Daily Journal🖍📓✏</title>
   </head>
   <body>
@@ -47,7 +53,7 @@
         </fieldset>
         <!-- end of moods -->
         <button class="journal_button">
-          Record Journal Entry
+          <i class="fas fa-check-square"></i>
         </button>
         <!-- end of button -->
         <hr />
@@ -79,6 +85,7 @@
           <input type="radio" name="filterMood" value="Meh" id="filterMeh" />
           <label for="filterMeh">Meh</label>
         </fieldset>
+        <button onclick="location.reload();">Remove Filters</button>
       </div>
       <!-- end of form -->
     </div>

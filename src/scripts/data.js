@@ -20,6 +20,14 @@ const ApiData = {
     return fetch(
       `http://localhost:3000/journalEntries?Mood=${radioValue}`
     ).then(entries => entries.json());
+  },
+  deleteJournalEntry(deleteID) {
+    return fetch(`http://localhost:3000/journalEntries/${deleteID}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
   }
 };
 

@@ -18,6 +18,7 @@ h1 {
 .journal_header {
   text-align: center;
   padding-top: 100px;
+  font-family: "Varela Round", sans-serif;
 }
 .journal_fields {
   display: flex;
@@ -38,7 +39,7 @@ h1 {
   flex-wrap: wrap;
 }
 .journal-card {
-  border: 4px solid #a38250;
+  border: 9px solid #a38250;
   width: 24%;
   margin: 10px 10px;
   background-color: #dadada;
@@ -47,7 +48,12 @@ h1 {
   padding-left: 25px;
   padding-right: 25px;
   text-align: center;
-  border-radius: 30%;
+  border-radius: 10%;
+  font-family: "Varela Round", sans-serif;
+}
+/* font awesome font size  */
+.fas {
+  font-size: x-large;
 }
 
 /* end of styles */

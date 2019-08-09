@@ -4,7 +4,8 @@ const renderJournalEntries = (
   JournalDate,
   ConceptsCovered,
   JournalEntry,
-  Mood
+  Mood,
+  id
 ) => {
   return `
             <div class="journal-card">
@@ -13,7 +14,7 @@ const renderJournalEntries = (
             <aside>${JournalEntry}</aside>
             <h4>Mood: ${Mood}</h4>
             <button class="journal_delete">
-          delete me
+            <i id="deleteID_${id}" class="fas fa-trash-alt"></i>
         </button>
             </div>
         `;

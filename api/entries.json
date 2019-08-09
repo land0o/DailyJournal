@@ -61,6 +61,13 @@
       "JournalEntry": "Finally got my input fields to clear by adding a .then(function) to return the text fields to an empty string on submission.",
       "Mood": "glorious",
       "id": 9
+    },
+    {
+      "JournalDate": "2019-08-08",
+      "ConceptsCovered": "Webpack Intro!",
+      "JournalEntry": "Hot day,short class... Today we learned a little bit about WebPack  and how it is a task rnner and a module bundler..See blog(curtiscrutchfield.com)",
+      "Mood": "meh",
+      "id": 10
     }
   ]
 }

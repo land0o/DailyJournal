@@ -12,7 +12,8 @@ const getAndRenderEntries = () => {
         entry.JournalDate,
         entry.ConceptsCovered,
         entry.JournalEntry,
-        entry.Mood
+        entry.Mood,
+        entry.id
       );
       journalDomRender(journalDom, html);
     }
@@ -78,4 +79,21 @@ radioButton.forEach(btn => {
     //   .then(allEntries => allEntries.filter(entry => entry.Mood === mood))
     //   .then(filteredArray => console.log("filterMethod", filteredArray));
   });
+});
+
+// delete button
+// add an event listner
+// collect the value id
+// use the id to delete selected id
+const deleteContainer = document.querySelector(".entryLog");
+deleteContainer.addEventListener("click", event => {
+  console.log("hi");
+  if (event.target.id.startsWith("deleteID")) {
+    console.log("hi inside");
+    const deleteID = event.target.id.split("_")[1];
+    console.log("deleteID: ", deleteID);
+
+    ApiData.deleteJournalEntry(deleteID).then(getAndRenderEntries);
+    console.log(deleteID);
+  }
 });
