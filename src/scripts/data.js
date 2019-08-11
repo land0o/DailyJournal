@@ -1,3 +1,8 @@
+// dom selectors
+const hiddenDomEdit = document.querySelector("#hiddenEditFieldId");
+const DomTitle = document.querySelector("#conceptsCovered");
+const DomEntry = document.querySelector("#journalEntry");
+
 // Fetch data from the API
 const ApiData = {
   getJournalEntries: function() {
@@ -28,6 +33,21 @@ const ApiData = {
         "Content-Type": "application/json"
       }
     });
+  },
+  editJournalEntry(editID) {
+    return fetch(`http://localhost:3000/journalEntries/${editID}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editID)
+    })
+      .then(response => response.json())
+      .then(edit => {
+        hiddenDomEdit.value = edit.id;
+        DomTitle.value = edit.ConceptsCovered;
+        DomEntry.value = edit.JournalEntry;
+      });
   }
 };
 

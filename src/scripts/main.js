@@ -43,13 +43,16 @@ document.querySelector(".journal_button").addEventListener("click", () => {
     alert("Please fill out all sections!");
   } else {
     // invoke post function
-    ApiData.postJournalEntry(journalObj)
-      .then(getAndRenderEntries)
-      .then(erase => {
-        //clears the input fields
-        document.getElementById("conceptsCovered").value = "";
-        document.getElementById("journalEntry").value = "";
-      });
+    const postAndRender = () => {
+      ApiData.postJournalEntry(journalObj)
+        .then(getAndRenderEntries)
+        .then(erase => {
+          //clears the input fields
+          document.getElementById("conceptsCovered").value = "";
+          document.getElementById("journalEntry").value = "";
+        });
+    };
+    postAndRender();
   }
 });
 
@@ -85,8 +88,8 @@ radioButton.forEach(btn => {
 // add an event listner
 // collect the value id
 // use the id to delete selected id
-const deleteContainer = document.querySelector(".entryLog");
-deleteContainer.addEventListener("click", event => {
+const articleContainer = document.querySelector(".entryLog");
+articleContainer.addEventListener("click", event => {
   console.log("hi");
   if (event.target.id.startsWith("deleteID")) {
     console.log("hi inside");
@@ -95,5 +98,12 @@ deleteContainer.addEventListener("click", event => {
 
     ApiData.deleteJournalEntry(deleteID).then(getAndRenderEntries);
     console.log(deleteID);
+  }
+  // edit button
+  else if (event.target.id.startsWith("editId")) {
+    console.log("hi inside");
+    const editID = event.target.id.split("_")[1];
+    console.log("editId: ", editID);
+    // ApiData.editJournalEntry(editID).then(postAndRender);
   }
 });

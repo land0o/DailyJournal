@@ -1,5 +1,6 @@
 {
-  "journalEntries": [{
+  "journalEntries": [
+    {
       "id": 1,
       "JournalDate": "07/12/2019",
       "ConceptsCovered": "JavaScript Objects",
@@ -68,6 +69,13 @@
       "JournalEntry": "Hot day,short class... Today we learned a little bit about WebPack  and how it is a task rnner and a module bundler..See blog(curtiscrutchfield.com)",
       "Mood": "meh",
       "id": 10
+    },
+    {
+      "JournalDate": "2019-08-09",
+      "ConceptsCovered": "t",
+      "JournalEntry": "test",
+      "Mood": "glorious",
+      "id": 11
     }
   ]
 }

@@ -16,6 +16,9 @@ const renderJournalEntries = (
             <button class="journal_delete">
             <i id="deleteID_${id}" class="fas fa-trash-alt"></i>
         </button>
+            <button class="journal_edit">
+            <i id="editId_${id}" class="fas fa-pencil-alt"></i>
+        </button>
             </div>
         `;
 };

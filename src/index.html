@@ -16,6 +16,8 @@
   <body>
     <h1 class="journal_header">Daily Journal🖍📓✏</h1>
     <div class="journal_form">
+      <input type="hidden" id="hiddenEditFieldId" value="" />
+
       <div class="journalSubmissions">
         <fieldset class="journal_fields">
           <label for="journalDate">Date of entry:</label>
@@ -90,6 +92,8 @@
       <!-- end of form -->
     </div>
     <!-- end of div journal form -->
+    <h1 class="journal_header">My Entries</h1>
+    <hr />
     <article class="entryLog"></article>
     <!-- end of article -->
     <script type="module" src="scripts/main.js"></script>
