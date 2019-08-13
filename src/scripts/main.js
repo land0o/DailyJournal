@@ -3,10 +3,12 @@ import ApiData from "./data.js";
 import renderJournalEntries from "./factory.js";
 import journalDomRender from "./dom.js";
 const journalDom = document.querySelector(".entryLog");
+const hiddenDomEdit = document.querySelector("#hiddenEditFieldId");
 
 // invoke the journal submisons to the page
 const getAndRenderEntries = () => {
   ApiData.getJournalEntries().then(entriesArray => {
+    journalDom.innerHTML = "";
     for (const entry of entriesArray) {
       const html = renderJournalEntries(
         entry.JournalDate,
@@ -39,6 +41,13 @@ document.querySelector(".journal_button").addEventListener("click", () => {
     Mood: moodOfTheDay
   };
   console.log(journalObj);
+
+  if (hiddenDomEdit.value !== "") {
+    ApiData.editJournalEntry(journalObj, hiddenDomEdit.value)
+      .then(ApiData.updateJournalEntry)
+      .then(() => getAndRenderEntries());
+  }
+
   if (date === "" || subject === "" || entry === "" || moodOfTheDay === "") {
     alert("Please fill out all sections!");
   } else {
@@ -104,6 +113,6 @@ articleContainer.addEventListener("click", event => {
     console.log("hi inside");
     const editID = event.target.id.split("_")[1];
     console.log("editId: ", editID);
-    // ApiData.editJournalEntry(editID).then(postAndRender);
+    ApiData.updateJournalEntry(editID).then(getAndRenderEntries);
   }
 });

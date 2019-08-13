@@ -27,7 +27,8 @@ h1 {
 }
 .journal_form {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin: auto;
 }
 .entryLog {
   padding-top: 15px;
