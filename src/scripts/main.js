@@ -3,7 +3,6 @@ import ApiData from "./data.js";
 import renderJournalEntries from "./factory.js";
 import journalDomRender from "./dom.js";
 const journalDom = document.querySelector(".entryLog");
-const hiddenDomEdit = document.querySelector("#hiddenEditFieldId");
 
 // invoke the journal submisons to the page
 const getAndRenderEntries = () => {
@@ -42,11 +41,11 @@ document.querySelector(".journal_button").addEventListener("click", () => {
   };
   console.log(journalObj);
 
-  if (hiddenDomEdit.value !== "") {
-    ApiData.editJournalEntry(journalObj, hiddenDomEdit.value)
-      .then(ApiData.updateJournalEntry)
-      .then(() => getAndRenderEntries());
-  }
+  // if (hiddenDomEdit.value !== "") {
+  //   ApiData.editJournalEntry(journalObj, hiddenDomEdit.value)
+  //     .then(ApiData.updateJournalEntry)
+  //     .then(() => getAndRenderEntries());
+  // }
 
   if (date === "" || subject === "" || entry === "" || moodOfTheDay === "") {
     alert("Please fill out all sections!");
@@ -64,6 +63,26 @@ document.querySelector(".journal_button").addEventListener("click", () => {
     postAndRender();
   }
 });
+
+document
+  .querySelector(".journal_button")
+  .addEventListener("click", saveAndEdit);
+// edit and save
+const saveAndEdit = () => {
+  const journalObj = {
+    JournalDate: date,
+    ConceptsCovered: subject,
+    JournalEntry: entry,
+    Mood: moodOfTheDay
+  };
+
+  if (hiddenDomEdit.value !== "") {
+    ApiData.editJournalEntry(journalObj, hiddenDomEdit.value)
+      .then(ApiData.updateJournalEntry)
+      .then(() => getAndRenderEntries());
+  }
+};
+saveAndEdit();
 
 // radio buttons
 
