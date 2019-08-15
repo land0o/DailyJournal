@@ -2,42 +2,42 @@
   "journalEntries": [
     {
       "id": 1,
-      "JournalDate": "07/12/2019",
+      "JournalDate": "2019-07-12",
       "ConceptsCovered": "JavaScript Objects",
       "JournalEntry": "Today we went over Book 2 Chapter 2 JavaScript Objects. We practiced objects doing the lighting exercise in the chapter. I understand the difference between objects{} and arrays[]. Also learned about Dot and Bracket notation",
       "Mood": "Meh"
     },
     {
       "id": 2,
-      "JournalDate": "07/12/2019",
+      "JournalDate": "2019-07-12",
       "ConceptsCovered": "Querying the Dom",
       "JournalEntry": "Went over the queryselector and how it can be used to change items in the html without writing additional html code. Set up a class in CSS and you are able to manipulate the HTML with Javascript",
       "Mood": "sappy"
     },
     {
       "id": 3,
-      "JournalDate": "07/11/2019",
+      "JournalDate": "2019-07-11",
       "ConceptsCovered": "Daily Journal",
       "JournalEntry": "Built and styled the 1st part of the daily journal",
       "Mood": "glorious"
     },
     {
       "id": 4,
-      "JournalDate": "07/11/2019",
+      "JournalDate": "2019-07-11",
       "ConceptsCovered": "Flexbox",
       "JournalEntry": "Went over the Flexbox, and how it can be used to style pages, was able to complete the coffehouse practice!",
       "Mood": "glorious"
     },
     {
       "id": 5,
-      "JournalDate": "07/19/2019",
+      "JournalDate": "2019-07-19",
       "ConceptsCovered": "API's",
       "JournalEntry": "Learned about API's(application program interface). Really cool but a little confusing.",
       "Mood": "Meh"
     },
     {
       "id": 6,
-      "JournalDate": "07/21/2019",
+      "JournalDate": "2019-07-21",
       "ConceptsCovered": "Daily Journal Part 3",
       "JournalEntry": "Completed the 3rd step of the daily journal fairly easy, wrote a function that inserts my html info into the DOM!",
       "Mood": "glorious"
@@ -66,93 +66,9 @@
     {
       "JournalDate": "2019-08-08",
       "ConceptsCovered": "Webpack Intro!",
-      "JournalEntry": "Hot day,short class... Today we learned a little bit about WebPack  and how it is a task rnner and a module bundler..See blog(curtiscrutchfield.com)",
+      "JournalEntry": "Hot day,short class... Today we learned a little bit about WebPack  and how it is a task runner and a module bundler..See blog(curtiscrutchfield.com)",
       "Mood": "meh",
       "id": 10
-    },
-    {
-      "JournalDate": "2019-08-12",
-      "ConceptsCovered": "testyyy",
-      "JournalEntry": "test",
-      "Mood": "glorious",
-      "id": 12
-    },
-    {
-      "JournalDate": "2019-08-12",
-      "ConceptsCovered": "poster",
-      "JournalEntry": "tester",
-      "Mood": "glorious",
-      "id": 13
-    },
-    {
-      "JournalDate": "2019-08-12",
-      "ConceptsCovered": "jenna",
-      "JournalEntry": "test",
-      "Mood": "glorious",
-      "id": 14
-    },
-    {
-      "JournalDate": "2019-08-14",
-      "ConceptsCovered": "sdfs",
-      "JournalEntry": "sfa",
-      "Mood": "glorious",
-      "id": 15
-    },
-    {
-      "JournalDate": "2019-08-12",
-      "ConceptsCovered": "test",
-      "JournalEntry": "please work",
-      "Mood": "glorious",
-      "id": 18
-    },
-    {
-      "JournalDate": "2019-08-20",
-      "ConceptsCovered": "test fail",
-      "JournalEntry": "wait it's working!",
-      "Mood": "defeated",
-      "id": 20
-    },
-    {
-      "JournalDate": "2019-08-20",
-      "ConceptsCovered": "test fail",
-      "JournalEntry": "wait it's working!",
-      "Mood": "defeated",
-      "id": 21
-    },
-    {
-      "JournalDate": "2019-08-13",
-      "ConceptsCovered": "test",
-      "JournalEntry": "wow",
-      "Mood": "glorious",
-      "id": 23
-    },
-    {
-      "JournalDate": "2019-08-13",
-      "ConceptsCovered": "test",
-      "JournalEntry": "wow wow wow",
-      "Mood": "glorious",
-      "id": 24
-    },
-    {
-      "JournalDate": "2019-08-13",
-      "ConceptsCovered": "test",
-      "JournalEntry": "wow wow wow wow wow wow",
-      "Mood": "sappy",
-      "id": 25
-    },
-    {
-      "JournalDate": "2019-08-13",
-      "ConceptsCovered": "teest",
-      "JournalEntry": "wtf",
-      "Mood": "glorious",
-      "id": 28
-    },
-    {
-      "JournalDate": "2019-08-13",
-      "ConceptsCovered": "teest",
-      "JournalEntry": "wtf soo",
-      "Mood": "glorious",
-      "id": 29
     }
   ]
 }

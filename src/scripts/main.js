@@ -2,7 +2,13 @@
 import ApiData from "./data.js";
 import renderJournalEntries from "./factory.js";
 import journalDomRender from "./dom.js";
+// selectors
 const journalDom = document.querySelector(".entryLog");
+const hiddenDomEdit = document.querySelector("#hiddenEditFieldId");
+let date = document.getElementById("journalDate");
+let subject = document.getElementById("conceptsCovered");
+let entry = document.getElementById("journalEntry");
+let moodOfTheDay = document.getElementById("mood");
 
 // invoke the journal submisons to the page
 const getAndRenderEntries = () => {
@@ -22,33 +28,30 @@ const getAndRenderEntries = () => {
 };
 getAndRenderEntries();
 
+// validation
+const validation = () => {
+  if (date === "" || subject === "" || entry === "" || moodOfTheDay === "") {
+    alert("Please fill out all sections!");
+  }
+};
+
 // submit button
 
 document.querySelector(".journal_button").addEventListener("click", () => {
-  // stops the form from refreshing
-  // event.preventDefault();
-  // collect values from form
-  let date = document.getElementById("journalDate").value;
-  let subject = document.getElementById("conceptsCovered").value;
-  let entry = document.getElementById("journalEntry").value;
-  let moodOfTheDay = document.getElementById("mood").value;
-
   const journalObj = {
-    JournalDate: date,
-    ConceptsCovered: subject,
-    JournalEntry: entry,
-    Mood: moodOfTheDay
+    JournalDate: date.value,
+    ConceptsCovered: subject.value,
+    JournalEntry: entry.value,
+    Mood: moodOfTheDay.value
   };
   console.log(journalObj);
 
-  // if (hiddenDomEdit.value !== "") {
-  //   ApiData.editJournalEntry(journalObj, hiddenDomEdit.value)
-  //     .then(ApiData.updateJournalEntry)
-  //     .then(() => getAndRenderEntries());
-  // }
-
-  if (date === "" || subject === "" || entry === "" || moodOfTheDay === "") {
-    alert("Please fill out all sections!");
+  // edit and save
+  if (hiddenDomEdit.value !== "") {
+    validation();
+    ApiData.editJournalEntry(journalObj, hiddenDomEdit.value)
+      .then(() => getAndRenderEntries())
+      .then((hiddenDomEdit.value = ""));
   } else {
     // invoke post function
     const postAndRender = () => {
@@ -63,26 +66,6 @@ document.querySelector(".journal_button").addEventListener("click", () => {
     postAndRender();
   }
 });
-
-document
-  .querySelector(".journal_button")
-  .addEventListener("click", saveAndEdit);
-// edit and save
-const saveAndEdit = () => {
-  const journalObj = {
-    JournalDate: date,
-    ConceptsCovered: subject,
-    JournalEntry: entry,
-    Mood: moodOfTheDay
-  };
-
-  if (hiddenDomEdit.value !== "") {
-    ApiData.editJournalEntry(journalObj, hiddenDomEdit.value)
-      .then(ApiData.updateJournalEntry)
-      .then(() => getAndRenderEntries());
-  }
-};
-saveAndEdit();
 
 // radio buttons
 
@@ -112,10 +95,7 @@ radioButton.forEach(btn => {
   });
 });
 
-// delete button
-// add an event listner
-// collect the value id
-// use the id to delete selected id
+// delete button and edit
 const articleContainer = document.querySelector(".entryLog");
 articleContainer.addEventListener("click", event => {
   console.log("hi");

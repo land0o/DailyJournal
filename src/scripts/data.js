@@ -39,14 +39,16 @@ const ApiData = {
       }
     });
   },
-  updateJournalEntry(editID) {
-    return fetch(`http://localhost:3000/journalEntries/${editID}`)
+  updateJournalEntry(entryID) {
+    return fetch(`http://localhost:3000/journalEntries/${entryID}`, {
+      cache: "no-cache"
+    })
       .then(response => response.json())
       .then(edit => {
+        DomDate.value = edit.JournalDate;
         hiddenDomEdit.value = edit.id;
         DomTitle.value = edit.ConceptsCovered;
         DomEntry.value = edit.JournalEntry;
-        DomDate.value = edit.JournalDate;
         DomMood.value = edit.Mood;
       });
   },
@@ -58,9 +60,7 @@ const ApiData = {
       },
       body: JSON.stringify(journalObj),
       cache: "no-cache"
-    })
-      .then(response => response.json())
-      .then((hiddenDomEdit.value = ""));
+    }).then(response => response.json());
   }
 };
 
